@@ -22,11 +22,22 @@ body {
 .avatar {
     width: 120px;
     border-radius: 80px;
+    animation-name: float;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-delay: 500ms;
+    animation-timing-function:ease-in;
+}
+
+@keyframes float {
+    50%{
+        transform: translateY(10px);
+    }
 }
 
 .profile h1{
     font-family: 'Noto Sans Mono', monospace;
-    margin: 10px;
+    margin: 20px 0 8px 0;
     font-size: 24px;
 }
 
@@ -37,7 +48,7 @@ body {
 }
 
 .profile{
-    padding-top: 30px;
+    padding-top: 25px;
     text-align: center;
 }
 
@@ -58,6 +69,10 @@ body {
     width: 50px;
 }
 
+.social li a img:hover {
+    transform: scale(1.1)
+}
+
 @media (max-width:620px){
     .social{
         margin: 30px 40px;
@@ -75,7 +90,6 @@ body {
     list-style: none;
     margin: 5px 10px;
 }
-
 
 .links-list li a {
     color: var(--text-color);
@@ -96,5 +110,8 @@ body {
     font-weight: 100;
     font-size: 14px;
     margin-top: 10px;
+}
 
+.links-list li a:hover {
+    transform: scale(1.05)
 }
