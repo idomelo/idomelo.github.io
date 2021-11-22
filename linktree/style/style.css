@@ -1,6 +1,6 @@
 :root {
     --primary-color: #090126;
-    --secundary-color: #e63946;
+    --secundary-color: #ca323f;
     --text-color: #f1faee;
 }
 
@@ -78,7 +78,9 @@ body {
     display: block;
     padding: 20px 10px;
     margin: 15px 15px;
-    background-color: var(--secundary-color);
+    /* background-color: var(--secundary-color); */
+    background: linear-gradient(
+    180deg, #ca323f 50%, rgb(168, 27, 39) 100%);
     text-decoration: none;
     border-radius: 6px;
     box-shadow: 0 0 6px var(--secundary-color)
