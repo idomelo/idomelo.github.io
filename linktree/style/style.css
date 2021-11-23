@@ -70,7 +70,8 @@ body {
 }
 
 .social li a img:hover {
-    transform: scale(1.1)
+    transform: scale(1.03);
+    filter: brightness(70%);
 }
 
 @media (max-width:620px){
@@ -113,5 +114,6 @@ body {
 }
 
 .links-list li a:hover {
-    transform: scale(1.05)
+    transform: scale(1.018);
+    filter: brightness(90%);
 }
