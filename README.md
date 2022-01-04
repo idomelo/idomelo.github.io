@@ -1,4 +1,4 @@
 # Linktree
 
-[Acesse aqui](https://idomelo.me/linktree/)
+[Acesse aqui](https://idomelo.me)
  
