@@ -11,6 +11,9 @@
             gtag('config', 'G-VHW68BPM8J');
         </script>
 
+        <!-- ======== Recaptcha ======== -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -455,34 +458,41 @@
                         </div>
                     </div>
 
-                    <form action="" class="contact__form grid">
+                    <form action="https://formspree.io/f/xyyokwwg" class="contact__form grid" method="POST">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
                                 <label for="contact__input" class="contact__label">Nome:</label>
-                                <input type="text" class="contact__input" id="contact__input">
+                                <input name="nome" type="text" class="contact__input" id="contact__input" required>
+                                <span class="error"></span>
                             </div>
 
                             <div class="contact__content">
                                 <label for="email__input" class="contact__label">Email:</label>
-                                <input type="email" class="contact__input" id="email__input">
+                                <input name="responder_para" type="email" class="contact__input" id="email__input" required>
+                                <span class="error"></span>
                             </div>
                         </div>
 
                         <div class="contact__content">
                             <label for="project__input" class="contact__label">Assunto:</label>
-                            <input type="text" class="contact__input" id="project__input">
+                            <input name="assunto" type="text" class="contact__input" id="project__input" required>
+                            <span class="error"></span>
                         </div>
 
                         <div class="contact__content">
                             <label for="message__input" class="contact__label">Mensagem:</label>
-                            <textarea name="" id="message__input" cols="0" rows="7" class="contact__input" maxlength="300"></textarea>
+                            <textarea name="mensagem" id="message__input" cols="0" rows="7" class="contact__input" maxlength="300" required></textarea>
+                            <span class="error"></span>
                         </div>
+
+                        <!-- ======= Recaptcha ======= -->
+                        <div class="g-recaptcha" data-sitekey="6LcRcBgeAAAAAJxFWLeko1vyKXL5k2Eq1zTYBZGV"></div>
                         
                         <div>
-                            <a href="#contact" class="button button--flex">
+                            <button type="submit" class="button button--flex">
                                 Enviar
                                 <i class="uil uil-message button__icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </form>
                 </div>

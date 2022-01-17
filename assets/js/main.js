@@ -129,38 +129,98 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
     // },
 });
 
-/*==================== TESTIMONIAL ====================*/
 
+/*==================== Form Validation ====================*/
 
-let swiperTestimonial = new Swiper('.testimonial__container', {
-    loop: true,
-    loopedSlides: 3,
-    spaceBetween: 48,
-    grabCursor: true,
-  
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+const fields = document.querySelectorAll('[required]') //seleciona todos o input (que tem a tag required)
+const form = document.querySelector('form')
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-    breakpoints:{
-        568:{
-            slidesPerView: 2,
+form.addEventListener('submit', event => {
+    event.preventDefault()
+    form.submit()//Se tudo estiver preenchido
+})
+
+function validateField(field) {
+    //verifica se há erros
+    function verifyErrors() {
+        let foundError = false
+
+        for(let error in field.validity){
+            //se não for customError
+            //Então verifica se tem erro
+            if(field.validity[error] && !field.validity.valid ) {
+                foundError = error
+            }
+        }
+
+        return foundError
+    }
+
+    function customMessage(typeError) {
+        const messages = {
+            text: {
+                valueMissing: 'Campo Obrigatório'
+            },
+            email: {
+                valueMissing: 'Email obrigatório',
+                typeMismatch: 'Por favor, preencha um email válido'
+            },
+            textarea: {
+                valueMissing:'Campo Obrigatório'
+            }
+        }
+
+        return messages[field.type][typeError]
+    }
+
+    function setCustomMessage(message) {
+        const spanError = field.parentNode.querySelector('span.error')
+
+        if(message) {
+            spanError.classList.add('active')
+            spanError.innerHTML = message
+        } else {
+            spanError.classList.remove('active')
+            spanError.innerHTML = ''
         }
     }
-    
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-});
+
+    return function() {
+        const error = verifyErrors()
+
+        if(error) {
+            const message = customMessage(error)
+
+            setCustomMessage(message)
+        } else {
+            setCustomMessage()
+        }
+    }
+}
+
+function customValidation(event) {
+    const field = event.target
+    const validation = validateField(field)
+
+    validation()
+}
+
+for(let field of fields) {
+    field.addEventListener('invalid', event => {
+        //Eliminar o bubble
+        event.preventDefault()
+        customValidation(event)
+    })
+    field.addEventListener('blur', customValidation)
+}
+
+// Recaptcha Validation
+window.onload = function() { 
+    var el = document.getElementById('g-recaptcha-response'); 
+    if (el) { 
+      el.setAttribute('required', 'required'); 
+    } 
+}
 
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
