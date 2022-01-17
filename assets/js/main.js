@@ -159,7 +159,7 @@ function validateField(field) {
     function customMessage(typeError) {
         const messages = {
             text: {
-                valueMissing: 'Campo Obrigatório'
+                valueMissing: 'Campo obrigatório'
             },
             email: {
                 valueMissing: 'Email obrigatório',
