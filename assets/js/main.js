@@ -159,14 +159,14 @@ function validateField(field) {
     function customMessage(typeError) {
         const messages = {
             text: {
-                valueMissing: 'Campo obrigatório'
+                valueMissing: '*Campo obrigatório'
             },
             email: {
-                valueMissing: 'Email obrigatório',
-                typeMismatch: 'Por favor, preencha um email válido'
+                valueMissing: '*Email obrigatório',
+                typeMismatch: '*Por favor, preencha um email válido'
             },
             textarea: {
-                valueMissing:'Campo Obrigatório'
+                valueMissing:'*Campo Obrigatório'
             }
         }
 
@@ -177,9 +177,11 @@ function validateField(field) {
         const spanError = field.parentNode.querySelector('span.error')
 
         if(message) {
+            field.style.border = '1px solid red'
             spanError.classList.add('active')
             spanError.innerHTML = message
         } else {
+            field.style.border = '1px solid green'
             spanError.classList.remove('active')
             spanError.innerHTML = ''
         }
@@ -220,6 +222,13 @@ window.onload = function() {
     if (el) { 
       el.setAttribute('required', 'required'); 
     } 
+}
+
+//Limpar form após envio
+window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }
 }
 
 
