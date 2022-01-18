@@ -11,8 +11,8 @@
     --hue-color: 230; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color: hsl(var(--hue-color), 69%, 35%);
+    --first-color-second: hsl(var(--hue-color), 69%, 35%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -104,7 +104,7 @@ body.dark-theme {
 }
 
 .change-theme:hover {
-    color: var(--first-color);
+    color: var(--first-color-alt);
 }
 
 
@@ -205,7 +205,7 @@ header {
 }
 
 .nav__logo:hover {
-    color: var(--first-color);
+    color: var(--first-color-alt);
 }
 
 .nav__toggle {
@@ -214,7 +214,7 @@ header {
 }
 
 .nav__toggle:hover {
-    color: var(--first-color);
+    color: var(--first-color-alt);
 }
 
 @media screen and (max-width: 767px){
@@ -246,7 +246,7 @@ header {
 }
 
 .nav__link:hover {
-    color: var(--first-color);
+    color: var(--first-color-alt);
 }
 
 .nav__icon {
@@ -274,7 +274,7 @@ header {
 
 /* Active link */
 .active-link {
-    color: var(--first-color);
+    color: var(--first-color-alt);
 }
 
 /* Change background header */
@@ -589,80 +589,6 @@ h3.skills__name {
     }
 }
 
-/*==================== QUALIFICATION ====================*/
-
-
-.qualification__tabs {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: var(--mb-2);
-}
-
-.qualification__button {
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    cursor: pointer;
-}
-
-.qualification__button:hover {
-    color: var(--first-color);
-}
-
-.qualification__icon {
-    font-size: 1.8rem;
-    margin-right: var(--mb-0-25);
-}
-
-.qualification__data {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    column-gap: 1.5rem;
-}
-
-.qualification__title {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-}
-
-.qualification__subtitle {
-    display: inline-block;
-    font-size: var(--small-font-size);
-    margin-bottom: var(--mb-1);
-}
-
-.qualification__calendar {
-    font-size: var(--smaller-font-size);
-    color: var(--text-color-light);
-}
-
-.qualification__rounder {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background-color: var(--first-color);
-    border-radius: 100%;
-}
-
-.qualification__line {
-    display: block;
-    width: 1px;
-    height: 100%;
-    background-color: var(--first-color);
-    transform: translate(6px, -7px);
-}
-
-.qualification [data-content] {
-    display: none;
-}
-
-.qualification__active[data-content] {
-    display: block;
-}
-
-.qualification__button.qualification__active {
-    color: var(--first-color);
-}
-
 
 /*==================== SERVICES ====================*/
 
@@ -863,7 +789,7 @@ h3.skills__name {
 }
 
 .contact__content {
-    padding: .75rem 1rem .25rem;
+    padding: .25rem;
 }
 
 span.error {
@@ -884,6 +810,7 @@ span.error.active {
 }
 
 .contact__input {
+    resize: vertical;
     width: 100%;
     background-color: var(--input-color);
     color: var(--text-color-base);
@@ -962,6 +889,10 @@ font-size: var(--small-font-size);
 .footer__link,
 .footer__social {
     color: #FFF;
+}
+
+.footer .footer__copy a {
+    color: var(--first-color-lighter)
 }
 
 
@@ -1290,15 +1221,3 @@ font-size: var(--small-font-size);
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
