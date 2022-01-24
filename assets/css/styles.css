@@ -1037,7 +1037,12 @@ font-size: var(--small-font-size);
         grid-template-columns: .6fr;
         justify-content: center;
     }
+}
 
+@media screen and (max-width: 767px) {
+    .services__modal-content {
+        min-width: 80%;
+    }   
 }
 
 @media screen and (min-width: 768px) {
