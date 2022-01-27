@@ -76,7 +76,7 @@
 
 body.dark-theme {
     /* HSL color mode */
-   
+
     --first-color-second: hsl(var(--hue-color), 30%, 8%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color-base: hsl(var(--hue-color), 8%, 75%);
@@ -85,6 +85,10 @@ body.dark-theme {
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+.transition_change_theme {
+    transition: all, 500ms;
 }
 
 
