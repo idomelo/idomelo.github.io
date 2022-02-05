@@ -87,10 +87,6 @@ body.dark-theme {
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
-.transition_change_theme {
-    transition: all, 500ms;
-}
-
 
 /*========== Button Dark/Light ==========*/
 
@@ -131,6 +127,7 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color-base);
+    transition: 500ms; /* For change-theme animation */
 }
 
 h1,h2,h3,h4 {
@@ -190,6 +187,7 @@ header {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    transition: 500ms; /* For change-theme animation */
 }
 
 /*==================== NAV ====================*/
