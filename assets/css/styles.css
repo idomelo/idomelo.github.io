@@ -127,7 +127,7 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color-base);
-    transition: 500ms; /* For change-theme animation */
+    transition: 400ms; /* For change-theme animation */
 }
 
 h1,h2,h3,h4 {
@@ -204,7 +204,7 @@ header {
 .nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
-    transition: 500ms;
+    transition: 400ms;
 }
 
 .nav__logo:hover {
