@@ -17,6 +17,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!--==================== SCROLLREVEAL ====================-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         
@@ -29,6 +32,24 @@
         <title>Ido | Portfolio</title>
     </head>
     <body>
+        <!-- ======== Search for dark theme on localstorage and apply ======== -->
+        <script>
+            const selectedTheme = localStorage.getItem('selected-theme')
+            const darkTheme = 'dark-theme'
+            const iconTheme = 'uil-sun'
+            const enableDarkTheme = () => {
+                // 1. Add the class to the body
+                document.body.classList.add(darkTheme)
+                // 2. Update darkMode in localStorage
+                localStorage.setItem('selected-theme', 'dark')
+                // 3. Update darkMode icon
+                themeButton.classList.remove(iconTheme)
+            }
+            if (selectedTheme === 'dark') {
+                enableDarkTheme()
+            }
+        </script>
+
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -87,7 +108,7 @@
             <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div class="home__content grid">
-                        <div class="home__social">
+                        <div class="home__social load-hidden">
                             <a href="https://www.linkedin.com/in/idomelo/" class="home__social-icon" target="_blank">
                                 <i class="uil uil-linkedin-alt"></i>
                             </a>
@@ -98,7 +119,7 @@
                             
                         </div>
 
-                        <div class="home__img">
+                        <div class="home__img load-hidden">
                             <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <mask id="mask0" mask-type="alpha">
                                     <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
@@ -116,7 +137,7 @@
                             </svg>
                         </div>
 
-                        <div class="home__data">
+                        <div class="home__data load-hidden">
                             <h1 class="home__title">Olá, me chamo Ido</h1>
                             <h3 class="home__subtitle">Fullstack Developer Jr.</h3>
                             <a href="#contact" class="button button--flex">
@@ -125,7 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="home__scroll">
+                    <div class="home__scroll load-hidden">
                         <a href="#about" class="home__scroll-button button--flex">
                             <i class="uil uil-mouse-alt home__scroll-mouse"></i>
                             <span class="home__scroll-name">Rolar para baixo</span>
@@ -559,16 +580,12 @@
                     &#169; Desenvolvido por Ido F. Melo<br>Foto de <a href="https://www.pexels.com/pt-br/@kevin-ku-92347" target="_blank">Kevin Ku</a>
                 </p>                
            </div>
-            
-        </footer>
+        </footer>     
         
         <!--==================== SCROLL TOP ====================-->
         <a href="#" class="scrollup" id="scroll-up">
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
-
-        <!--==================== SCROLLREVEAL ====================-->
-        <script src="https://unpkg.com/scrollreveal"></script>
 
         <!--==================== SWIPER JS ====================-->
         <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->

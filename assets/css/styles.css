@@ -70,9 +70,7 @@
     }
 }
 
-
 /*========== Variables Dark theme ==========*/
-
 
 body.dark-theme {
     /* HSL color mode */
@@ -166,6 +164,11 @@ img {
 .section__title,
 .section__subtitle {
     text-align: center;
+}
+
+/* utility */
+html.sr .load-hidden {
+    visibility: hidden;
 }
 
 /*==================== LAYOUT ====================*/
@@ -319,6 +322,7 @@ header {
 
 .home__blob-img {
     width: 170px;
+    filter: drop-shadow(4px 4px 25px blue);
 }
 
 .home__data {

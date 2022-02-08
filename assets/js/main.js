@@ -1,3 +1,44 @@
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    //reset: true,
+})
+
+sr.reveal(`.home__img`)
+sr.reveal(`.home__data`, {delay: 700})
+sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
+
+/*==================== DARK/LIGHT THEME EVENTS ====================*/
+
+const themeButton = document.getElementById('theme-button')
+
+const disableDarkTheme = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove(darkTheme)
+  // 2. Update darkMode in localStorage 
+  localStorage.setItem('selected-theme', 'light')
+  // 3. Update darkMode icon
+  themeButton.classList.add(iconTheme)
+}
+
+// When someone clicks the button
+themeButton.addEventListener('click', () => {
+  // get their darkMode setting
+  const selectedTheme = localStorage.getItem('selected-theme')
+  
+  // if it not current enabled, enable it
+  if (selectedTheme !== 'dark') {
+    enableDarkTheme()
+  // if it has been enabled, turn it off
+  } else {  
+    disableDarkTheme()
+  }
+})
+
 /*==================== MENU SHOW AND HIDDEN ====================*/
 
 const $navMenu = document.getElementById('nav-menu'),
@@ -274,51 +315,3 @@ function scrollUp(){
     if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
-
-
-/*==================== DARK LIGHT THEME ====================*/
-
-
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
-//const transition_change_theme = 'transition_change_theme'
-
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
-
-/*==================== SCROLL REVEAL ANIMATION ====================*/
-
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-    // reset: true,
-})
-
-sr.reveal(`.home__img`)
-sr.reveal(`.home__data`, {delay: 700})
-sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
