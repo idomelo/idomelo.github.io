@@ -32,24 +32,6 @@
         <title>Ido | Portfolio</title>
     </head>
     <body>
-        <!-- ======== Search for dark theme on localstorage and apply ======== -->
-        <script>
-            const selectedTheme = localStorage.getItem('selected-theme')
-            const darkTheme = 'dark-theme'
-            const iconTheme = 'uil-sun'
-            const enableDarkTheme = () => {
-                // 1. Add the class to the body
-                document.body.classList.add(darkTheme)
-                // 2. Update darkMode in localStorage
-                localStorage.setItem('selected-theme', 'dark')
-                // 3. Update darkMode icon
-                themeButton.classList.remove(iconTheme)
-            }
-            if (selectedTheme === 'dark') {
-                enableDarkTheme()
-            }
-        </script>
-
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
@@ -93,7 +75,7 @@
 
                 <div class="nav__btns">
                     <!-- Theme change button -->
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+                    <i class="uil uil-sun change-theme" id="theme-button"></i>
 
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>

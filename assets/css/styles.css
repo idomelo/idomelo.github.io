@@ -10,19 +10,19 @@
     /* Change favorite color */
     --hue-color: 230; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
-    /* HSL color mode */
+    /* HSL color mode (dark)*/
     --first-color: hsl(var(--hue-color), 69%, 35%);
-    --first-color-second: hsl(var(--hue-color), 69%, 35%);
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color-base: hsl(var(--hue-color), 8%, 45%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color-base: hsl(var(--hue-color), 8%, 75%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #FFF;
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -70,19 +70,17 @@
     }
 }
 
-/*========== Variables Dark theme ==========*/
+/*========== Variables Light theme ==========*/
 
-body.dark-theme {
-    /* HSL color mode */
-
-    --first-color-second: hsl(var(--hue-color), 30%, 8%);
-    --title-color: hsl(var(--hue-color), 8%, 95%);
-    --text-color-base: hsl(var(--hue-color), 8%, 75%);
-    --input-color: hsl(var(--hue-color), 29%, 16%);
-    --body-color: hsl(var(--hue-color), 28%, 12%);
-    --container-color: hsl(var(--hue-color), 29%, 16%);
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+body.light-theme {
+    --first-color-second: hsl(var(--hue-color), 69%, 35%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color-base: hsl(var(--hue-color), 8%, 45%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: #FFF;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 }
 
 
@@ -125,7 +123,7 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color-base);
-    transition: 400ms; /* For change-theme animation */
+    transition: 50ms; /* For change-theme animation */
 }
 
 h1,h2,h3,h4 {
@@ -190,7 +188,7 @@ header {
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
-    transition: 500ms; /* For change-theme animation */
+    transition: 50ms; /* For change-theme animation */
 }
 
 /*==================== NAV ====================*/
@@ -207,7 +205,7 @@ header {
 .nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
-    transition: 400ms;
+    transition: 50ms;
 }
 
 .nav__logo:hover {
