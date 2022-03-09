@@ -23,9 +23,12 @@
 
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        
+
         <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="preload" href="assets/css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        </noscript>
         
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
@@ -388,64 +391,7 @@
                 <div class="portfolio__container container swiper-container">
                     <div class="swiper-wrapper">
 
-                        <!--==================== PORTFOLIO 1 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <div class="portfolio__img">
-                                <picture>
-                                    <source srcset="assets/img/barbershop_pc.webp" type="image/webp">
-                                    <img src="assets/img/barbershop_pc.png" alt="Pagina de barbearia">
-                                </picture>
-                            </div>
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Landing Page Moderna</h3>
-                                <p class="portfolio__description">Landing Page responsiva para barbearia</p>
-                                <a href="https://idomelo.me/barber-shop/" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 2 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <div class="portfolio__img">
-                                <picture>
-                                    <source srcset="assets/img/todolist_mobile.webp" type="image/webp">
-                                    <img src="assets/img/todolist_mobile.png" alt="lista de tarefas">
-                                </picture>
-                            </div>
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">To do List</h3>
-                                <p class="portfolio__description">Aplicação Web para gerenciar e armazenar tarefas localmente</p>
-                                <a href="https://idomelo.me/to-do-list/" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <div class="portfolio__img">
-                                <picture>
-                                    <source class="portfolio__img" srcset="assets/img/preview-alexa.webp" type="image/webp">
-                                    <img class="portfolio__img" src="assets/img/preview-alexa.png" alt="site alexa">
-                                </picture>
-                            </div>   
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Portfólio</h3>
-                                <p class="portfolio__description">Focado em mobile first, adaptável a maioria dos dispositivos. Foi a base para criação dessa página, porém, é mais completo</p>
-                                <a href="https://idomelo.me/portfolio-alexa" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
+                        <!--==================== PROJETO 1 ====================-->
                         <div class="portfolio__content grid swiper-slide">
                             <div class="portfolio__img">
                                 <picture>
@@ -464,6 +410,62 @@
                             </div>
                         </div>
 
+                        <!--==================== PROJETO 2 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <div class="portfolio__img">
+                                <picture>
+                                    <source class="portfolio__img" srcset="assets/img/preview-alexa.webp" type="image/webp">
+                                    <img class="portfolio__img" src="assets/img/preview-alexa.png" alt="site alexa">
+                                </picture>
+                            </div>   
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Portfólio</h3>
+                                <p class="portfolio__description">Focado em mobile first, adaptável a maioria dos dispositivos. Foi a base para criação dessa página, porém, é mais completo</p>
+                                <a href="https://idomelo.me/portfolio-alexa" class="button button--flex button--small portfolio__button" target="_blank">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--==================== PROJETO 3 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <div class="portfolio__img">
+                                <picture>
+                                    <source srcset="assets/img/todolist_mobile.webp" type="image/webp">
+                                    <img src="assets/img/todolist_mobile.png" alt="lista de tarefas">
+                                </picture>
+                            </div>
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">To do List</h3>
+                                <p class="portfolio__description">Aplicação Web para gerenciar e armazenar tarefas localmente</p>
+                                <a href="https://idomelo.me/to-do-list/" class="button button--flex button--small portfolio__button" target="_blank">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--==================== PROJETO 4 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <div class="portfolio__img">
+                                <picture>
+                                    <source srcset="assets/img/barbershop_pc.webp" type="image/webp">
+                                    <img src="assets/img/barbershop_pc.png" alt="Pagina de barbearia">
+                                </picture>
+                            </div>
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Landing Page Moderna</h3>
+                                <p class="portfolio__description">Landing Page responsiva para barbearia</p>
+                                <a href="https://idomelo.me/barber-shop/" class="button button--flex button--small portfolio__button" target="_blank">
+                                    Demo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Add Pagination -->
