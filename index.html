@@ -23,12 +23,6 @@
 
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="preload" href="assets/css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript>
-            <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        </noscript>
         
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
@@ -64,8 +58,8 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i> Portfólio
+                            <a href="#work" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i> Projetos
                             </a>
                         </li>
                         <li class="nav__item">
@@ -118,14 +112,14 @@
                                     165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                                     129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home__blob-img" x="12" y="-25" href="assets/img/perfil.png"/>
+                                    <image class="home__blob-img" x="12" y="-25" href="assets/img/perfil/perfil.png"/>
                                 </g>
                             </svg>
                         </div>
 
                         <div class="home__data load-hidden">
                             <h1 class="home__title">Olá, me chamo Ido</h1>
-                            <h3 class="home__subtitle">Fullstack Developer Jr.</h3>
+                            <h3 class="home__subtitle">Fullstack Developer</h3>
                             <a href="#contact" class="button button--flex">
                                 Contato <i class="uil uil-message button__icon"></i>
                             </a>
@@ -150,8 +144,8 @@
                 <div class="about__container container grid">
                     <div class="about__img">
                         <picture>
-                            <source class="about__img" srcset="assets/img/about.webp" type="image/webp">
-                            <img class="about__img" src="assets/img/about.jpg" alt="Sobre">
+                            <source class="about__img" srcset="assets/img/about/about.webp" type="image/webp">
+                            <img class="about__img" src="assets/img/about/about.jpg" alt="Sobre">
                         </picture>
                     </div>
 
@@ -384,119 +378,146 @@
                 </div>
             </section>
 
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-                <h2 class="section__title">Portfólio</h2>
-                <span class="section__subtitle">Projetos mais recentes</span>
+            <!--==================== WORK SECTION ====================-->
+            <section class="work section" id="work">
+                <h2 class="section__title">Projetos Recentes</h2>
+                <span class="section__subtitle">O que estou construindo</span>
 
-                <div class="portfolio__container container swiper-container">
-                    <div class="swiper-wrapper">
+                <div class="work__filters">
+                    <span class="work__item active-work" data-filter="all">Todos</span>
+                    <span class="work__item" data-filter=".web">Web</span>
+                    <span class="work__item" data-filter=".mobile">Mobile</span>
+                </div>
+                
 
-                        <!--==================== PROJETO 1 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <div class="portfolio__img">
-                                <picture>
-                                    <source srcset="assets/img/anunx.webp" type="image/webp">
-                                    <img src="assets/img/anunx.png" alt="Ecommerce">
-                                </picture>
-                            </div>
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Anunx Ecommerce</h3>
-                                <p class="portfolio__description">Projeto com Login Social, Autenticação e Cadastro de Produtos no MongoDb. Feito com Nextjs e Material UI</p>
-                                <a href="https://anunx-deploy.vercel.app/" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
+                <div class="work__container container grid">
+                    <!--==================== PROJETO 1 ====================-->
+                    <div class="work__card mix web">
+                        <div>
+                            <picture>
+                                <source class="work__img" srcset="assets/img/anunx/anunx_pc.webp" type="image/webp">
+                                <img class="work__img" src="assets/img/anunx/anunx_pc.png" alt="Ecommerce">
+                            </picture>                            
                         </div>
 
-                        <!--==================== PROJETO 2 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <div class="portfolio__img">
-                                <picture>
-                                    <source class="portfolio__img" srcset="assets/img/lista_de_clientes.webp" type="image/webp">
-                                    <img class="portfolio__img" src="assets/img/lista_de_clientes.png" alt="lista de clientes react">
-                                </picture>
-                            </div>   
+                        <h3 class="work__title">Anunx Ecommerce</h3>
 
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Lista de Clientes</h3>
-                                <p class="portfolio__description">Aplicação Feita em React e Material UI que se comunica com API Rest e simula edição e registro de clientes</p>
-                                <a href="https://listadeclientes.vercel.app/" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
+                        <a href="https://anunx-deploy.vercel.app" class="work__button" target="_blank">
+                            Demo
+                            <i class="uil uil-arrow-right work__icon"></i>
+                        </a>
+                        <div class="work__description">
+                            <p>
+                                Projeto com login social e cadastro de produtos no MongoDB
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!--==================== PROJETO 2 ====================-->
+                    <div class="work__card mix web">
+                        <div>
+                            <picture>
+                                <source class="work__img" srcset="assets/img/listadeclientes/lista_de_clientes_pc.webp" type="image/webp">
+                                <img class="work__img" src="assets/img/listadeclientes/lista_de_clientes_pc.png" alt="lista de clientes react">
+                            </picture>
                         </div>
 
-                        <!--==================== PROJETO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <div class="portfolio__img">
-                                <picture>
-                                    <source class="portfolio__img" srcset="assets/img/preview-alexa.webp" type="image/webp">
-                                    <img class="portfolio__img" src="assets/img/preview-alexa.png" alt="site alexa">
-                                </picture>
-                            </div>   
+                        <h3 class="work__title">Lista de Clientes</h3>
 
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Portfólio</h3>
-                                <p class="portfolio__description">Focado em mobile first, adaptável a maioria dos dispositivos. Foi a base para criação dessa página, porém, é mais completo</p>
-                                <a href="https://idomelo.me/portfolio-alexa" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PROJETO 4 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <div class="portfolio__img">
-                                <picture>
-                                    <source srcset="assets/img/todolist_mobile.webp" type="image/webp">
-                                    <img src="assets/img/todolist_mobile.png" alt="lista de tarefas">
-                                </picture>
-                            </div>
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">To do List</h3>
-                                <p class="portfolio__description">Aplicação Web para gerenciar e armazenar tarefas localmente</p>
-                                <a href="https://idomelo.me/to-do-list/" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PROJETO 5 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <div class="portfolio__img">
-                                <picture>
-                                    <source srcset="assets/img/barbershop_pc.webp" type="image/webp">
-                                    <img src="assets/img/barbershop_pc.png" alt="Pagina de barbearia">
-                                </picture>
-                            </div>
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Landing Page Moderna</h3>
-                                <p class="portfolio__description">Landing Page responsiva para barbearia</p>
-                                <a href="https://idomelo.me/barber-shop/" class="button button--flex button--small portfolio__button" target="_blank">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
+                        <a href="https://listadeclientes.vercel.app" class="work__button" target="_blank">
+                            Demo
+                            <i class="uil uil-arrow-right work__icon"></i>
+                        </a>
+                        <div class="work__description">
+                            <p>
+                                Aplicação que simula edição e registro de clientes numa API
+                            </p>
                         </div>
                     </div>
 
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!--==================== PROJETO 3 ====================-->
+                    <div class="work__card mix web">
+                        <div>
+                            <picture>
+                                <source class="work__img" srcset="assets/img/alexa/preview-alexa.webp" type="image/webp">
+                                <img class="work__img" src="assets/img/alexa/preview-alexa.png" alt="portfolio alexa">
+                            </picture>                        
+                        </div>
 
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                        <h3 class="work__title">Portfólio Alexa</h3>
+
+                        <a href="https://idomelo.me/portfolio-alexa" class="work__button" target="_blank">
+                            Demo
+                            <i class="uil uil-arrow-right work__icon"></i>
+                        </a>
+                        <div class="work__description">
+                            <p>
+                                Portfólio no estilo mobile-first.
+                            </p>
+                        </div>
                     </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    
+                    <!--==================== PROJETO 4 ====================-->
+                    <div class="work__card mix web">
+                        <div>
+                            <picture>
+                                <source class="work__img" srcset="assets/img/todolist/todolist_pc.webp" type="image/webp">
+                                <img class="work__img" src="assets/img/todolist//todolist_pc.png" alt="lista de tarefas">
+                            </picture>
+                        </div>
+
+                        <h3 class="work__title">Lista de Tarefas</h3>
+
+                        <a href="https://idomelo.me/to-do-list/" class="work__button" target="_blank">
+                            Demo
+                            <i class="uil uil-arrow-right work__icon"></i>
+                        </a>
+                        <div class="work__description">
+                            <p>
+                                Gerencia e armazena tarefas localmente
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--==================== PROJETO 5 ====================-->
+                    <div class="work__card mix web">
+                        <div>
+                            <picture>
+                                <source class="work__img" srcset="assets/img/barbershop/barbershop_pc.webp" type="image/webp">
+                                <img class="work__img" src="assets/img/barbershop/barbershop_pc.png" alt="Pagina de barbearia">
+                            </picture>                            
+                        </div>
+
+                        <h3 class="work__title">Página para Barbearia</h3>
+
+                        <a href="https://idomelo.me/barber-shop/" class="work__button" target="_blank">
+                            Demo
+                            <i class="uil uil-arrow-right work__icon"></i>
+                        </a>
+                        <div class="work__description">
+                            <p>
+                                Landing Page responsiva para barbearia
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!--==================== PROJETO 6 ====================-->
+                    <div class="work__card mix mobile">
+                        <div class="icon__wrapper">
+                            <i class="uil uil-android "></i>
+                        </div>
+
+                        <h3 class="work__title">Em breve...</h3>
+
+                        <a href="#!" class="work__button">
+                            Demo
+                            <i class="uil uil-arrow-right work__icon"></i>
+                        </a>
+                        <!-- <div class="work__description">
+                            <p>
+                                Coisas boas vindo aí :)
+                            </p>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -585,7 +606,7 @@
                             <a href="#services" class="footer__link">Serviços</a>
                         </li>
                         <li>
-                            <a href="#portfolio" class="footer__link">Portfólio</a>
+                            <a href="#work" class="footer__link">Projetos Recentes</a>
                         </li>
                         <li>
                             <a href="#contact" class="footer__link">Contato</a>
@@ -618,9 +639,8 @@
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
 
-        <!--==================== SWIPER JS ====================-->
-        <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--==================== MIXITUP ====================-->
+        <script src="assets/js/mixitup.min.js"></script>
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>

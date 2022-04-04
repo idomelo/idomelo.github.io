@@ -157,41 +157,32 @@ $modalCloses.forEach((modalClose) => {
 })
 
 
-/*==================== PORTFOLIO SWIPER  ====================*/
+/*==================== WORK ====================*/
 
 
-let swiperPortfolio = new Swiper('.portfolio__container', {
-    // cssMode: true,
-    loop: true,
-    loopedSlides: 3,
-    spaceBetween: 48,
-    grabCursor: true,
-
-    autoplay: {
-        delay: 5500,
+const mixer = mixitup('.work__container', {
+    selectors: {
+        target: '.work__card'
     },
-  
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        // dynamicBullets: true,
-    },
-    
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
+    animation: {
+        duration: 300,
+    }
 });
+
+/*===== Active selector =====*/
+
+const linkWork = document.querySelectorAll('.work__item')
+
+function activeWork() {
+    linkWork.forEach(l => l.classList.remove('active-work'))
+    this.classList.add('active-work')
+}
+
+linkWork.forEach(l => l.addEventListener('click', activeWork))
 
 
 /*==================== Form Validation ====================*/
+
 
 const fields = document.querySelectorAll('[required]') //seleciona todos o input (que tem a tag required)
 const form = document.querySelector('form')
