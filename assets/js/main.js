@@ -158,23 +158,24 @@ $modalCloses.forEach((modalClose) => {
 
 
 /*==================== WORK ====================*/
-
-
-const mixer = mixitup('.work__container', {
-    selectors: {
-        target: '.work__card'
-    },
-    animation: {
-        duration: 300,
-    }
-});
-
 /*===== Active selector =====*/
 
 const linkWork = document.querySelectorAll('.work__item')
+const workCards = document.querySelectorAll('.work__card')
 
 function activeWork() {
+    const dataFilter = this.getAttribute('data-filter')
+
     linkWork.forEach(l => l.classList.remove('active-work'))
+    workCards.forEach(l => {
+        l.classList.remove('active')
+        l.classList.add('hide')
+
+        if(l.getAttribute('data-item') == dataFilter || dataFilter == 'all') {
+            l.classList.remove('hide')
+            l.classList.add('active')
+        }
+    })
     this.classList.add('active-work')
 }
 
@@ -184,7 +185,7 @@ linkWork.forEach(l => l.addEventListener('click', activeWork))
 /*==================== Form Validation ====================*/
 
 
-const fields = document.querySelectorAll('[required]') //seleciona todos o input (que tem a tag required)
+const fields = document.querySelectorAll('[required]') //seleciona todos o inputs (que tem a tag required)
 const form = document.querySelector('form')
 
 form.addEventListener('submit', event => {

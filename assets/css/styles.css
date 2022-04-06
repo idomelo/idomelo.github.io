@@ -664,6 +664,11 @@ header {
     background-color: var(--container-color);
     padding: 1rem;
     box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    transition: transform 800ms;
+}
+
+.work__card.hide {
+    display: none;
 }
 
 .work__description {
@@ -993,7 +998,7 @@ font-size: var(--small-font-size);
 
     .work__container {
         justify-content: center;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .work__img {
@@ -1113,6 +1118,10 @@ font-size: var(--small-font-size);
         width: 450px;
     }
 
+    .work__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .icon__wrapper {
         font-size: 4.5rem;
     }
@@ -1161,9 +1170,9 @@ font-size: var(--small-font-size);
 
     .work__card:hover {
         border: 1px solid var(--first-color);
-        transform: scale(1.04);
+        transform: scale(1.08);
         height: fit-content;
-        margin-bottom: -70px !important;
+        margin-bottom: -100px !important;
         z-index: 4;
     }
 
