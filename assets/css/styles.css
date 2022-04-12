@@ -1172,8 +1172,12 @@ font-size: var(--small-font-size);
         border: 1px solid var(--first-color);
         transform: scale(1.08);
         height: fit-content;
-        margin-bottom: -100px !important;
+        margin-bottom: -150px !important;
         z-index: 4;
+    }
+
+    .work__card:hover:last-of-type {
+        margin-bottom: 0 !important;
     }
 
     .work__description {
