@@ -701,6 +701,21 @@ header {
     font-size: 5rem;
 }
 
+.cards_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.3rem;
+}
+
+.card_tech {
+    padding: 0.4rem 0.8rem;
+    background-color: var(--first-color-second);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 0.63rem;
+    font-weight: var(--font-medium);
+}
+
 .work__button:hover .work__icon {
     transform: translateX(.25rem);
 }
@@ -890,7 +905,7 @@ font-size: var(--small-font-size);
 /*========== SCROLL BAR ==========*/
 
 ::-webkit-scrollbar {
-    width: .60rem;
+    width: 1rem;
     background-color: var(--scroll-bar-color);
     border-radius: .5rem;
 }
