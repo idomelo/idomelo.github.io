@@ -1128,6 +1128,9 @@ font-size: var(--small-font-size);
     }
     .services__content {
         padding: 6rem 0 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .services__modal-content {
         width: 450px;
