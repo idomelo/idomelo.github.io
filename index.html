@@ -20,12 +20,16 @@
 
         <!--==================== SCROLLREVEAL ====================-->
         <script src="https://unpkg.com/scrollreveal"></script>
+        
+        <!--==================== LOTTIE PLAYER ====================-->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
+
 
         <title>Ido | Portfolio</title>
     </head>
@@ -137,11 +141,8 @@
                 <span class="section__subtitle">Apresentação</span>
 
                 <div class="about__container container grid">
-                    <div class="about__img">
-                        <picture>
-                            <source class="about__img" srcset="assets/img/about/about.webp" type="image/webp">
-                            <img class="about__img" src="assets/img/about/about.jpg" alt="Sobre">
-                        </picture>
+                    <div class="about__img">                        
+                        <lottie-player src="assets/img/about/about-lottie.json"  background="transparent"  speed="1.25"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
                     </div>
 
                     <div class="about__data">
@@ -353,8 +354,8 @@
 
             <!--==================== WORK SECTION ====================-->
             <section class="work section" id="work">
-                <h2 class="section__title">Projetos Recentes</h2>
-                <span class="section__subtitle">O que estou construindo</span>
+                <h2 class="section__title">Projetos</h2>
+                <span class="section__subtitle">O que já construí</span>
 
                 <div class="work__filters">
                     <span class="work__item active-work" data-filter="all">Todos</span>
@@ -376,11 +377,14 @@
 
                         <a href="https://anunx-deploy.vercel.app" class="work__button" target="_blank">
                             Demo
-                            <i class="uil uil-arrow-right work__icon"></i>
+                            <i class="uil uil-arrow-right work__icon"></i><br>
                         </a>
+                        <span class="work__down">
+                            <i class="uil uil-angle-down"></i>
+                        </span>
                         <div class="work__description">
                             <p>
-                                Ecommerce completo com login social, cadastro de produtos e autenticação JWT. Coloque seu anúncio lá!<br><br>
+                                Ecommerce completo com login social, cadastro de produtos e autenticação JWT. <a href="https://anunx-deploy.vercel.app" class="work__button" target="_blank" noopener>Divulgue seu Anúncio!</a><br><br>
                                 
                                 <div class="cards_wrapper">
                                     <p class="card_tech">React</p>
@@ -408,6 +412,9 @@
                             Demo
                             <i class="uil uil-arrow-right work__icon"></i>
                         </a>
+                        <span class="work__down">
+                            <i class="uil uil-angle-down"></i>
+                        </span>
                         <div class="work__description">
                             <p>
                                 Landing Page Responsiva para Banco<br><br>
@@ -435,6 +442,9 @@
                             Demo
                             <i class="uil uil-arrow-right work__icon"></i>
                         </a>
+                        <span class="work__down">
+                            <i class="uil uil-angle-down"></i>
+                        </span>
                         <div class="work__description">
                             <p>
                                 Aplicação que simula edição e registro de clientes numa API<br><br>
@@ -464,6 +474,9 @@
                             Demo
                             <i class="uil uil-arrow-right work__icon"></i>
                         </a>
+                        <span class="work__down">
+                            <i class="uil uil-angle-down"></i>
+                        </span>
                         <div class="work__description">
                             <p>
                                 Portfólio no estilo mobile-first<br><br>
@@ -491,6 +504,9 @@
                             Demo
                             <i class="uil uil-arrow-right work__icon"></i>
                         </a>
+                        <span class="work__down">
+                            <i class="uil uil-angle-down"></i>
+                        </span>
                         <div class="work__description">
                             <p>
                                 Gerenciador de tarefas no navegador<br><br>
@@ -518,6 +534,9 @@
                             Demo
                             <i class="uil uil-arrow-right work__icon"></i>
                         </a>
+                        <span class="work__down">
+                            <i class="uil uil-angle-down"></i>
+                        </span>
                         <div class="work__description">
                             <p>
                                 Landing Page responsiva para barbearia<br><br>
@@ -635,7 +654,7 @@
                             <a href="#services" class="footer__link">Serviços</a>
                         </li>
                         <li>
-                            <a href="#work" class="footer__link">Projetos Recentes</a>
+                            <a href="#work" class="footer__link">Projetos</a>
                         </li>
                         <li>
                             <a href="#contact" class="footer__link">Contato</a>

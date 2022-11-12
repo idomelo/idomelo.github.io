@@ -434,10 +434,10 @@ header {
 
 
 .about__img {
-    width: 200px;
-    border-radius: 1.25rem;
+    border-radius: 3.25rem;
     justify-self: center;
     align-self: center;
+    margin-top: -4rem;
 }
 
 .about__description {
@@ -535,7 +535,6 @@ header {
 
 .services__container {
     gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
 }
 
 .services__content {
@@ -660,11 +659,16 @@ header {
 
 .work__card {
     min-height: 14rem;
+    height: fit-content;
     border-radius: 1rem;
     background-color: var(--container-color);
     padding: 1rem;
     box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
-    transition: transform 800ms;
+    transition: transform 1500ms;
+}
+
+.work__down {
+    display: none;
 }
 
 .work__card.hide {
@@ -672,7 +676,6 @@ header {
 }
 
 .work__description {
-    display: none;
     max-width: 100%;
 }
 
@@ -1000,6 +1003,7 @@ font-size: var(--small-font-size);
 
     .about__container,
     .skills__container,
+    .services__container,
     .contact__container,
     .footer__container {
         grid-template-columns: repeat(2, 1fr);
@@ -1096,9 +1100,6 @@ font-size: var(--small-font-size);
     .about__container {
         column-gap: 5rem;
     }
-    .about__img {
-        width: 350px;
-    }
     .about__description {
         text-align: initial;
     }
@@ -1138,6 +1139,42 @@ font-size: var(--small-font-size);
 
     .work__container {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .work__down {
+        color: var(--first-color);
+        display: flex;
+        justify-content: center;
+    }
+
+    .work_card {
+        padding: 1.25rem;
+        transform: scale(1);
+    }
+
+    .work__card:hover {
+        border: 1px solid var(--first-color);
+        transform: scale(1.08);
+        height: fit-content;
+        margin-bottom: -500px !important;
+        z-index: 4;
+    }
+
+    .work__card:hover:last-of-type {
+        margin-bottom: 0 !important;
+    }
+
+    .work__description {
+        font-size: var(--smaller-font-size);
+        display: none;
+    }
+
+    .work__card:hover .work__description{
+        display: block;
+    }
+
+    .work__card:hover .work__down {
+        display: none;
     }
 
     .icon__wrapper {
@@ -1184,13 +1221,14 @@ font-size: var(--small-font-size);
     
     .work_card {
         padding: 1.25rem;
+        transform: scale(1);
     }
 
     .work__card:hover {
         border: 1px solid var(--first-color);
         transform: scale(1.08);
         height: fit-content;
-        margin-bottom: -150px !important;
+        margin-bottom: -500px !important;
         z-index: 4;
     }
 
@@ -1200,6 +1238,7 @@ font-size: var(--small-font-size);
 
     .work__description {
         font-size: var(--smaller-font-size);
+        display: none;
     }
 
     .work__card:hover .work__description{
