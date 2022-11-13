@@ -166,6 +166,7 @@ img {
 
 .section__title,
 .section__subtitle {
+    max-height: 100%;
     text-align: center;
 }
 
@@ -441,6 +442,7 @@ header {
 }
 
 .about__description {
+    max-height: 100%;
     text-align: center;
     margin-bottom: var(--mb-2-5);
 }
@@ -676,7 +678,9 @@ header {
 }
 
 .work__description {
+    font-size: var(--smaller-font-size);
     max-width: 100%;
+    max-height: 100%;
 }
 
 .work__img {
@@ -688,6 +692,7 @@ header {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     margin-bottom: .25rem;
+    max-height: 100%;
 }
 
 .work__button {
