@@ -1,702 +1,655 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-VHW68BPM8J"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-VHW68BPM8J');
-        </script>
-
-        <!-- ======== Recaptcha ======== -->
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
-
-        <!--==================== SCROLLREVEAL ====================-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-        
-        <!--==================== LOTTIE PLAYER ====================-->
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="assets/css/styles.css">
-
-
-        <title>Ido | Portfolio</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#home" class="nav__logo">Ido F. Melo</a>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Início
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i> Sobre
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i> Habilidades
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i> Serviços
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#work" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i> Projetos
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contato
-                            </a>
-                        </li>
-                    </ul>
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
-                </div>
-
-                <div class="nav__btns">
-                    <!-- Theme change button -->
-                    <i class="uil uil-sun change-theme" id="theme-button"></i>
-
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social load-hidden">
-                            <a href="mailto:idomelo123@gmail.com" class="home__social-icon" target="_blank" title="Envie-me um email!">
-                                <i class="uil uil-envelope"></i>
-                            </a>
-                            
-                            <a href="https://www.linkedin.com/in/idomelo/" class="home__social-icon" target="_blank" title="Linkedin">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-
-                            <a href="https://gitlab.com/idomelo" class="home__social-icon" target="_blank" title="Gitlab">
-                                <i class="uil uil-gitlab"></i>
-                            </a>
-
-                            <a href="https://www.github.com/idomelo/" class="home__social-icon" target="_blank" title="Github">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                            
-                        </div>
-
-                        <div class="home__img load-hidden">
-                            <img class="home__blob" src="/assets/img/perfil/home_image.svg"></i>
-                            
-                        </div>
-
-                        <div class="home__data load-hidden">
-                            <h1 class="home__title">Ido F. Melo</h1>
-                            <h3 class="home__subtitle">Desenvolvedor de software</h3>
-                            <a href="#contact" class="button button--flex">
-                                Contato <i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="home__scroll load-hidden">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Rolar para baixo</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                <h2 class="section__title">Sobre Mim</h2>
-                <span class="section__subtitle">Apresentação</span>
-
-                <div class="about__container container grid">
-                    <div class="about__img">                        
-                        <lottie-player src="assets/img/about/about-lottie.json"  background="transparent"  speed="1.25"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-                    </div>
-
-                    <div class="about__data">
-                        <p class="about__description">
-                            Olá! Meu nome é Ido e sou Desenvolvedor Web, com mais de <span id="xpTime"></span> de experiência.
-                            <br><br>
-                            Atualmente trabalho com <strong>Angular</strong> e <strong>Spring</strong>, contribuindo na criação de sistemas robustos e escaláveis.
-                        </p>
-                        <div class="about__info">
-                            <div>
-                                <span class="about__info-title">10+</span>
-                                <span class="about__info-name">Projetos <br> concluídos</span>
-                            </div>
-                        </div>
-
-                        <!-- <div class="about__buttons">
-                            <a href="assets/pdf/ido-Cv.pdf" class="button button--flex" target="_blank">
-                                Ver Currículo <i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-                <h2 class="section__title">Habilidades</h2>
-                <span class="section__subtitle">Meu nível técnico</span>
-
-                <div class="skills__container container grid">
-                    <!--==================== SKILLS 1 ====================-->
-                    <div class="skills__content">
-                        <h3 class="skills__title">Frontend</h3>
-
-                        <div class="skills__box">
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">HTML</h3>
-                                    </div>
-                                </div>  
-
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">CSS</h3>
-                                    </div>
-                                </div>  
-
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">JavaScript</h3>
-                                    </div>
-                                </div>  
-
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">Typescript</h3>
-                                    </div>
-                                </div> 
-                            </div>
-
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">Sass</h3>
-                                    </div>
-                                </div>  
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">Angular 11+</h3>
-                                    </div>
-                                </div>  
-
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">Material UI</h3>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--==================== SKILLS 2 ====================-->
-                    <div class="skills__content">
-                        <h3 class="skills__title">Backend</h3>
-
-                        <div class="skills__box">
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">Java/Spring</h3>
-                                    </div>
-                                </div>  
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">Arquitetura MVC</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="uil uil-check-circle"></i>
-                                    <div>
-                                        <h3 class="skills__name">PostgreSQL</h3>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                
-                <h2 class="section__title">Serviços</h2>
-                <span class="section__subtitle">O que eu faço</span>
-
-                <div class="services__container container grid">
-
-                    <!--==================== SERVICES 1 ====================-->
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-web-grid services__icon"></i>
-                            <h3 class="services__title">Sites e Aplicações Web</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">Ver Mais
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-                        
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <h4 class="services__modal-title">Sites e Aplicações Web</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Landing Pages</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Páginas que se adaptam a celular e a computador</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Animações e Elementos interativos</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Entre outros . . .</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--==================== SERVICES 2 ====================-->
-                    <div class="services__content">
-                        <div>
-                            <i class="uil uil-server-network services__icon"></i>
-                            <h3 class="services__title">Backend</h3>
-                        </div>
-
-                        <span class="button button--flex button--small button--link services__button">Ver Mais
-                            <i class="uil uil-arrow-right button__icon"></i>
-                        </span>
-                        
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <h4 class="services__modal-title">Backend</h4>
-                                <i class="uil uil-times services__modal-close"></i>
-
-                                <ul class="services__modal-services grid">
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>API's com Spring / Spring Boot</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Gerenciamento e Persistência de Dados com Spring JPA</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Padrão de Arquitetura MVC</p>
-                                    </li>
-                                    <li class="services__modal-service">
-                                        <i class="uil uil-check-circle services__modal-icon"></i>
-                                        <p>Entre outros. . .</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== WORK SECTION ====================-->
-            <section class="work section" id="work">
-                <h2 class="section__title">Projetos</h2>
-                <span class="section__subtitle">O que já construí</span>
-
-                <div class="work__filters">
-                    <span class="work__item active-work" data-filter="all">Todos</span>
-                    <span class="work__item" data-filter="web">Web</span>
-                    <span class="work__item" data-filter="mobile">Mobile</span>
-                </div>
-
-                <div class="work__container container grid">
-                    <!--==================== PROJETO 1 ====================-->
-                    <div class="work__card" data-item="web">
-                        <div>
-                            <picture>
-                                <source class="work__img" srcset="assets/img/anunx/anunx_pc.webp" type="image/webp">
-                                <img class="work__img" src="assets/img/anunx/anunx_pc.png" alt="Ecommerce">
-                            </picture>                            
-                        </div>
-
-                        <h3 class="work__title">Anunx Ecommerce</h3>
-
-                        <a href="https://anunx-deploy.vercel.app" class="work__button" target="_blank">
-                            Demo
-                            <i class="uil uil-arrow-right work__icon"></i><br>
-                        </a>
-                        <span class="work__down">
-                            <i class="uil uil-angle-down"></i>
-                        </span>
-                        <div class="work__description">
-                            <p>
-                                Ecommerce completo com login social, cadastro de produtos e autenticação JWT. <a href="https://anunx-deploy.vercel.app" class="work__button" target="_blank">Divulgue seu Anúncio!</a><br><br>
-                                
-                                <div class="cards_wrapper">
-                                    <p class="card_tech">React</p>
-                                    <p class="card_tech">NextJS </p>
-                                    <p class="card_tech">Material UI</p>
-                                    <p class="card_tech">MongoDB</p>
-                                    <p class="card_tech">NextAuth</p>
-                                </div>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!--==================== PROJETO 2 ====================-->
-                    <div class="work__card" data-item="web">
-                        <div>
-                            <picture>
-                                <source class="work__img" srcset="assets/img/easybank/desktop-preview.webp" type="image/webp">
-                                <img class="work__img" src="assets/img/easybank/desktop-preview.jpg" alt="easybank">
-                            </picture>                            
-                        </div>
-
-                        <h3 class="work__title">Easybank</h3>
-
-                        <a href="https://idomelo.github.io/easy-bank-landing-page" class="work__button" target="_blank">
-                            Demo
-                            <i class="uil uil-arrow-right work__icon"></i>
-                        </a>
-                        <span class="work__down">
-                            <i class="uil uil-angle-down"></i>
-                        </span>
-                        <div class="work__description">
-                            <p>
-                                Landing Page Responsiva para Banco<br><br>
-                                <div class="cards_wrapper">
-                                    <p class="card_tech">HTML</p>
-                                    <p class="card_tech">CSS </p>
-                                    <p class="card_tech">Javascript</p>
-                                </div>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!--==================== PROJETO 3 ====================-->
-                    <div class="work__card" data-item="web">
-                        <div>
-                            <picture>
-                                <source class="work__img" srcset="assets/img/listadeclientes/lista_de_clientes_pc.webp" type="image/webp">
-                                <img class="work__img" src="assets/img/listadeclientes/lista_de_clientes_pc.png" alt="lista de clientes react">
-                            </picture>
-                        </div>
-
-                        <h3 class="work__title">Lista de Clientes</h3>
-
-                        <a href="https://listadeclientes.vercel.app" class="work__button" target="_blank">
-                            Demo
-                            <i class="uil uil-arrow-right work__icon"></i>
-                        </a>
-                        <span class="work__down">
-                            <i class="uil uil-angle-down"></i>
-                        </span>
-                        <div class="work__description">
-                            <p>
-                                Aplicação que simula edição e registro de clientes numa API<br><br>
-                                <div class="cards_wrapper">
-                                    <p class="card_tech">React</p>
-                                    <p class="card_tech">React Router </p>
-                                    <p class="card_tech">Material UI</p>
-                                    <p class="card_tech">Axios</p>
-                                    <p class="card_tech">Context API</p>
-                                </div>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!--==================== PROJETO 4 ====================-->
-                    <div class="work__card" data-item="web">
-                        <div>
-                            <picture>
-                                <source class="work__img" srcset="assets/img/alexa/preview-alexa.webp" type="image/webp">
-                                <img class="work__img" src="assets/img/alexa/preview-alexa.png" alt="portfolio alexa">
-                            </picture>                        
-                        </div>
-
-                        <h3 class="work__title">Portfólio Alexa</h3>
-
-                        <a href="https://idomelo.github.io/portfolio-alexa" class="work__button" target="_blank">
-                            Demo
-                            <i class="uil uil-arrow-right work__icon"></i>
-                        </a>
-                        <span class="work__down">
-                            <i class="uil uil-angle-down"></i>
-                        </span>
-                        <div class="work__description">
-                            <p>
-                                Site de Portfólio<br><br>
-                                <div class="cards_wrapper">
-                                    <p class="card_tech">HTML</p>
-                                    <p class="card_tech">CSS </p>
-                                    <p class="card_tech">Javascript</p>
-                                </div>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!--==================== PROJETO 5 ====================-->
-                    <div class="work__card" data-item="web">
-                        <div>
-                            <picture>
-                                <source class="work__img" srcset="assets/img/todolist/todolist_pc.webp" type="image/webp">
-                                <img class="work__img" src="assets/img/todolist//todolist_pc.png" alt="lista de tarefas">
-                            </picture>
-                        </div>
-
-                        <h3 class="work__title">Lista de Tarefas</h3>
-
-                        <a href="https://idomelo.github.io/to-do-list/" class="work__button" target="_blank">
-                            Demo
-                            <i class="uil uil-arrow-right work__icon"></i>
-                        </a>
-                        <span class="work__down">
-                            <i class="uil uil-angle-down"></i>
-                        </span>
-                        <div class="work__description">
-                            <p>
-                                Gerenciador de tarefas no navegador<br><br>
-                                <div class="cards_wrapper">
-                                    <p class="card_tech">HTML</p>
-                                    <p class="card_tech">CSS </p>
-                                    <p class="card_tech">Javascript</p>
-                                </div>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!--==================== PROJETO 6 ====================-->
-                    <div class="work__card" data-item="web">
-                        <div>
-                            <picture>
-                                <source class="work__img" srcset="assets/img/barbershop/barbershop_pc.webp" type="image/webp">
-                                <img class="work__img" src="assets/img/barbershop/barbershop_pc.png" alt="Pagina de barbearia">
-                            </picture>
-                        </div>
-
-                        <h3 class="work__title">Página para Barbearia</h3>
-
-                        <a href="https://idomelo.github.io/barber-shop/" class="work__button" target="_blank">
-                            Demo
-                            <i class="uil uil-arrow-right work__icon"></i>
-                        </a>
-                        <span class="work__down">
-                            <i class="uil uil-angle-down"></i>
-                        </span>
-                        <div class="work__description">
-                            <p>
-                                Landing Page para barbearia<br><br>
-                                <div class="cards_wrapper">
-                                    <p class="card_tech">HTML</p>
-                                    <p class="card_tech">CSS </p>
-                                    <p class="card_tech">Javascript</p>
-                                </div>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!--==================== PROJETO 7 ====================-->
-                    <div class="work__card" data-item="mobile">
-                        <div class="icon__wrapper">
-                            <i class="uil uil-android "></i>
-                        </div>
-
-                        <h3 class="work__title">Em breve...</h3>
-
-                        <a href="#!" class="work__button">
-                            Demo
-                            <i class="uil uil-arrow-right work__icon"></i>
-                        </a>
-                        <!-- <div class="work__description">
-                            <p>
-                                Coisas boas vindo aí :)
-                            </p>
-                        </div> -->
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
-                <h2 class="section__title">Entre em Contato</h2>
-
-                <div class="contact__container container grid">
-                    <div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-envelope contact__icon"></i>
-
-                            <div>
-                                <h3 class="contact__title">E-mail</h3>
-                                <span class="contact__subtitle">idomelo123@gmail.com</span>
-                            </div>
-                        </div>
-
-                        <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-
-                            <div>
-                                <h3 class="contact__title">Localização</h3>
-                                <span class="contact__subtitle">Ceará - Brazil</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <form action="https://formspree.io/f/xyyokwwg" class="contact__form grid" method="POST">
-                        <div class="contact__inputs grid">
-                            <div class="contact__content">
-                                <label for="contact__input" class="contact__label">Nome:</label>
-                                <input name="nome" type="text" class="contact__input" id="contact__input" required>
-                                <span class="error"></span>
-                            </div>
-
-                            <div class="contact__content">
-                                <label for="email__input" class="contact__label">Email:</label>
-                                <input name="responder_para" type="email" class="contact__input" id="email__input" required>
-                                <span class="error"></span>
-                            </div>
-                        </div>
-
-                        <div class="contact__content">
-                            <label for="project__input" class="contact__label">Assunto:</label>
-                            <input name="assunto" type="text" class="contact__input" id="project__input">
-                            <span class="error"></span>
-                        </div>
-
-                        <div class="contact__content">
-                            <label for="message__input" class="contact__label">Mensagem:</label>
-                            <textarea name="mensagem" id="message__input" cols="0" rows="7" class="contact__input" maxlength="400" required></textarea>
-                            <span class="error"></span>
-                        </div>
-
-                        <!-- Set language of formspree to pt-br -->
-                        <input type="hidden" name="_language" value="pt-BR" />
-
-                        <!-- ======= Recaptcha ======= -->
-                        <div class="g-recaptcha" data-sitekey="6LcRcBgeAAAAAJxFWLeko1vyKXL5k2Eq1zTYBZGV"></div>
-                        
-                        <div>
-                            <button type="submit" id="button__submit" class="button button--flex">
-                                Enviar
-                                <i class="uil uil-message button__icon"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-           <div class="footer__bg">
-                <div class="footer__container container grid">
-                    <div>
-                        <h1 class="footer__title">Ido F. Melo</h1>
-                        <span class="footer__subtitle">Desenvolvedor Fullstack</span>
-                    </div>
-
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#services" class="footer__link">Serviços</a>
-                        </li>
-                        <li>
-                            <a href="#work" class="footer__link">Projetos</a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="footer__link">Contato</a>
-                        </li>
-                    </ul>
-
-                    <div class="footer__socials">
-                        <a href="https://www.linkedin.com/in/idomelo" class="footer__social" target="_blank" title="Linkedin">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-
-                        <a href="https://github.com/idomelo" class="footer__social" target="_blank" title="Github">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-
-                        <a href="https://gitlab.com/idomelo" class="footer__social" target="_blank" title="Gitlab">
-                            <i class="uil uil-gitlab"></i>
-                        </a>
-
-                        <a href="mailto:idomelo123@gmail.com" class="footer__social" target="_blank" title="Envie-me um email!">
-                            <i class="uil uil-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <p class="footer__copy">                    
-                    * Imagem 1 por <a href="https://storyset.com/work" target="_blank">Storyset</a>
-                    <br>
-                    * Imagem 2 por <a href="https://www.pexels.com/pt-br/@kevin-ku-92347" target="_blank">Kevin Ku</a>
-                    <br>
-                    <br>
-                    &#169;2022 Ido Ferreira Melo
-                </p>
-           </div>
-        </footer>     
-        
-        <!--==================== SCROLL TOP ====================-->
-        <a href="#" class="scrollup" id="scroll-up">
-            <i class="uil uil-arrow-up scrollup__icon"></i>
-        </a>
-
-        <!--==================== MAIN JS ====================-->
-        <script src="assets/js/main.js"></script>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      var storedTheme = null;
+      try { storedTheme = localStorage.getItem("theme"); } catch (error) {}
+      var theme = storedTheme === "light" || storedTheme === "dark"
+        ? storedTheme
+        : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      root.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <title>Ido Melo — Full-Stack Engineer, Java & Angular</title>
+  <meta name="description" content="Ido Melo is a full-stack engineer building Angular and Spring Boot systems for logistics, transportation, and archival platforms. Based in Ceará, Brazil.">
+  <meta name="author" content="Ido Ferreira Melo">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://idomelo.com/">
+  <link rel="alternate" hreflang="en" href="https://idomelo.com/">
+  <link rel="alternate" hreflang="pt" href="https://idomelo.com/">
+  <link rel="alternate" hreflang="es" href="https://idomelo.com/">
+  <link rel="alternate" hreflang="x-default" href="https://idomelo.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Ido Melo">
+  <meta property="og:title" content="Ido Melo — Full-Stack Engineer, Java & Angular">
+  <meta property="og:description" content="Full-stack engineer building Angular and Spring Boot systems that stay easy to change. Ceará, Brazil.">
+  <meta property="og:url" content="https://idomelo.com/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ido Melo — Full-Stack Engineer, Java & Angular">
+  <meta name="twitter:description" content="Full-stack engineer building Angular and Spring Boot systems that stay easy to change. Ceará, Brazil.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0A0A'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='12' font-weight='600' fill='%23EDEDED'%3EIM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "var(--ink)",
+            panel: "var(--panel)",
+            line: "var(--line)",
+            paper: "var(--paper)",
+            mute: "var(--mute)",
+            accent: "var(--accent)"
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+          },
+          maxWidth: {
+            page: "68rem"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root, html[data-theme="dark"] {
+      color-scheme: dark;
+      --ink: #0A0A0A;
+      --panel: #121212;
+      --line: #262626;
+      --paper: #EDEDED;
+      --mute: #A1A1AA;
+      --accent: #8BA4FF;
+      --header: rgba(10, 10, 10, .82);
+    }
+    html[data-theme="light"] {
+      color-scheme: light;
+      --ink: #F6F6F4;
+      --panel: #FFFFFF;
+      --line: #E2E2DE;
+      --paper: #161616;
+      --mute: #5C5C64;
+      --accent: #3146C4;
+      --header: rgba(246, 246, 244, .88);
+    }
+    html { scroll-behavior: smooth; background: var(--ink); }
+    .js body { visibility: hidden; }
+    .js.ready body { visibility: visible; }
+    section, footer { scroll-margin-top: 4.5rem; }
+    ::selection { background: var(--accent); color: var(--ink); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .js .reveal { opacity: 0; transform: translateY(10px); }
+      .js .reveal.in { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s ease; }
+    }
+    .nav-scrolled {
+      background: var(--header);
+      border-color: var(--line);
+      backdrop-filter: blur(16px);
+    }
+  </style>
+  <script id="structured-data" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "dateModified": "2026-11-09",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Ido Ferreira Melo",
+        "alternateName": "Ido Melo",
+        "jobTitle": "Full-Stack Engineer",
+        "description": "Full-stack engineer specializing in Java, Spring Boot, and Angular.",
+        "url": "https://idomelo.com/",
+        "email": "mailto:idomelo123@gmail.com",
+        "image": "https://github.com/idomelo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "Ceará",
+          "addressCountry": "BR"
+        },
+        "knowsAbout": ["Java", "Spring", "Spring Boot", "Angular", "TypeScript", "PostgreSQL", "Oracle SQL", "JasperReports", "Docker", "GitLab CI"],
+        "sameAs": [
+          "https://github.com/idomelo",
+          "https://www.linkedin.com/in/idomelo/",
+          "https://gitlab.com/idomelo",
+          "https://idomelo.com/"
+        ]
+      }
+    }
+  </script>
+</head>
+<body class="bg-ink text-paper font-sans antialiased">
+  <noscript><style>body { visibility: visible; }</style></noscript>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:bg-paper focus:px-3 focus:py-2 focus:text-ink" data-i18n="skip">Skip to content</a>
+
+  <header id="header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent">
+    <div class="mx-auto flex h-16 max-w-page items-center justify-between gap-4 px-6">
+      <a href="#top" class="text-sm font-medium tracking-tight text-paper">Ido Melo</a>
+      <div class="flex items-center gap-5 md:gap-8">
+        <nav id="nav" class="hidden items-center gap-8 text-sm text-mute md:flex" data-i18n-aria="nav.primary" aria-label="Primary">
+          <a class="transition-colors hover:text-paper" href="#about" data-i18n="nav.about">About</a>
+          <a class="transition-colors hover:text-paper" href="#stack" data-i18n="nav.stack">Stack</a>
+          <a class="transition-colors hover:text-paper" href="#work" data-i18n="nav.work">Work</a>
+          <a class="transition-colors hover:text-paper" href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <div id="lang-switch" class="flex items-center text-xs" role="group" data-i18n-aria="lang.label" aria-label="Language">
+            <button class="rounded px-1.5 py-1 text-mute transition-colors hover:text-paper" type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+            <button class="rounded px-1.5 py-1 text-mute transition-colors hover:text-paper" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+            <button class="rounded px-1.5 py-1 text-mute transition-colors hover:text-paper" type="button" data-set-lang="es" aria-pressed="false">ES</button>
+          </div>
+          <button id="theme-toggle" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-mute transition-colors hover:text-paper" type="button" aria-pressed="false" aria-label="Switch theme">
+            <svg id="theme-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"></svg>
+          </button>
+          <button id="menu-button" class="inline-flex h-9 items-center text-sm text-mute md:hidden" type="button" aria-expanded="false" aria-controls="mobile-nav" data-i18n="menu.open">Menu</button>
+        </div>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden border-t border-line bg-ink px-6 py-4 md:hidden" data-i18n-aria="nav.mobile" aria-label="Mobile">
+      <div class="mx-auto flex max-w-page flex-col gap-3 text-sm text-mute">
+        <a class="hover:text-paper" href="#about" data-i18n="nav.about">About</a>
+        <a class="hover:text-paper" href="#stack" data-i18n="nav.stack">Stack</a>
+        <a class="hover:text-paper" href="#work" data-i18n="nav.work">Work</a>
+        <a class="hover:text-paper" href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="top" class="mx-auto max-w-page px-6 pb-24 pt-36 md:pb-32 md:pt-44">
+      <p class="reveal text-sm text-mute" data-i18n="hero.kicker">Full-Stack Engineer · Java & Angular</p>
+      <h1 class="reveal mt-5 max-w-3xl text-4xl font-medium leading-[1.08] tracking-[-0.035em] md:text-6xl" data-i18n="hero.title">I keep complex systems easy to change.</h1>
+      <p class="reveal mt-6 max-w-xl text-base leading-relaxed text-mute md:text-lg" data-i18n="hero.lead">4+ years shipping Angular and Spring Boot software — from the data model to the screen.</p>
+      <div class="reveal mt-10 flex flex-wrap items-center gap-3">
+        <a href="#work" class="inline-flex h-11 items-center rounded-full bg-paper px-5 text-sm font-medium text-ink transition-transform duration-200 hover:-translate-y-0.5" data-i18n="hero.view">View work</a>
+        <a href="mailto:idomelo123@gmail.com" class="inline-flex h-11 items-center rounded-full border border-line px-5 text-sm font-medium text-paper transition-colors hover:border-mute" data-i18n="hero.contact">Get in touch</a>
+      </div>
+      <dl class="reveal mt-16 grid max-w-lg grid-cols-3 gap-6 border-t border-line pt-6 text-sm">
+        <div>
+          <dt class="text-mute" data-i18n="stat.experience">Experience</dt>
+          <dd class="mt-1 text-paper" data-i18n="stat.years">4+ years</dd>
+        </div>
+        <div>
+          <dt class="text-mute" data-i18n="stat.focus">Focus</dt>
+          <dd class="mt-1 text-paper">Java · Angular</dd>
+        </div>
+        <div>
+          <dt class="text-mute" data-i18n="stat.based">Based in</dt>
+          <dd class="mt-1 text-paper" data-i18n="stat.place">Ceará, Brazil</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="about" class="border-t border-line">
+      <div class="mx-auto grid max-w-page gap-10 px-6 py-24 md:grid-cols-12 md:py-32">
+        <div class="md:col-span-4">
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-mute" data-i18n="about.index">01 — About</p>
+          <h2 class="mt-3 text-2xl font-medium tracking-tight" data-i18n="about.title">How I work</h2>
+        </div>
+        <div class="max-w-xl space-y-5 text-[15px] leading-7 text-mute md:col-span-8 md:text-base">
+          <p class="reveal text-paper" data-i18n="about.p1">Most of my work lives where a product meets an organization: records, permissions, queues, and the screens people use every day. Those constraints are the job. A vague design shows up later, usually in production.</p>
+          <p class="reveal" data-i18n="about.p2">I work across the stack. Angular, TypeScript, and RxJS on the front. Java, Spring Boot, and PostgreSQL on the back, with JUnit and Mockito where behavior has to stay fixed. Delivery includes GitLab CI, Docker, and SonarQube. I have also built content-management flows on Alfresco.</p>
+          <p class="reveal" data-i18n="about.p3">I like shipping clean, scalable code. Small changes, explicit contracts, and writing for the next person who opens the file.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="border-t border-line">
+      <div class="mx-auto grid max-w-page gap-10 px-6 py-24 md:grid-cols-12 md:py-32">
+        <div class="md:col-span-4">
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-mute" data-i18n="stack.index">02 — Stack</p>
+          <h2 class="mt-3 text-2xl font-medium tracking-tight" data-i18n="stack.title">What I use</h2>
+          <p class="mt-4 max-w-xs text-sm leading-6 text-mute" data-i18n="stack.lead">Tools I rely on in day-to-day delivery, grouped by where they sit.</p>
+        </div>
+        <div class="grid gap-10 md:col-span-8 sm:grid-cols-2">
+          <div class="reveal">
+            <h3 class="text-sm font-medium text-paper" data-i18n="stack.frontend">Frontend</h3>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Angular</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">TypeScript</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">RxJS</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">JavaScript</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Sass/SCSS</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Angular Material</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">HTML & CSS</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">JasperReports</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3 class="text-sm font-medium text-paper" data-i18n="stack.backend">Backend</h3>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Java</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Spring</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Spring Boot</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">REST</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">MVC</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">JUnit</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Mockito</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3 class="text-sm font-medium text-paper" data-i18n="stack.data">Data</h3>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">PostgreSQL</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Oracle SQL</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">SQL</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">MongoDB</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <h3 class="text-sm font-medium text-paper" data-i18n="stack.delivery">Delivery</h3>
+            <ul class="mt-4 flex flex-wrap gap-2">
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Git</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">GitLab CI</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Docker</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">SonarQube</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Selenium</li>
+              <li class="rounded-full border border-line px-3 py-1 text-sm text-mute">Alfresco</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="border-t border-line">
+      <div class="mx-auto max-w-page px-6 py-24 md:py-32">
+        <div class="max-w-xl">
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-mute" data-i18n="work.index">03 — Work</p>
+          <h2 class="mt-3 text-2xl font-medium tracking-tight" data-i18n="work.title">What I have shipped</h2>
+          <p class="mt-4 text-sm leading-6 text-mute" data-i18n="work.lead">Logistics, transportation, and archival software. Java and Angular, still in production.</p>
+        </div>
+
+        <div class="mt-14 divide-y divide-line border-y border-line">
+          <article class="reveal grid gap-6 py-10 md:grid-cols-12">
+            <p class="text-sm text-mute md:col-span-1">01</p>
+            <div class="md:col-span-10">
+              <h3 class="text-xl font-medium tracking-tight" data-i18n="work.1.title">Driver and routing software</h3>
+              <p class="mt-3 max-w-2xl text-sm leading-6 text-mute" data-i18n="work.1.body">I maintain and evolve logistics applications for drivers and route planning, in Java and Angular. Map interaction had to stay fluid at real volume: more than 4.5 million deliveries in 2025.</p>
+            </div>
+          </article>
+
+          <article class="reveal grid gap-6 py-10 md:grid-cols-12">
+            <p class="text-sm text-mute md:col-span-1">02</p>
+            <div class="md:col-span-10">
+              <h3 class="text-xl font-medium tracking-tight" data-i18n="work.2.title">Access on a transportation system</h3>
+              <p class="mt-3 max-w-2xl text-sm leading-6 text-mute" data-i18n="work.2.body">On a TMS, I implemented access control so only authorized people reach specific parts of the product.</p>
+            </div>
+          </article>
+
+          <article class="reveal grid gap-6 py-10 md:grid-cols-12">
+            <p class="text-sm text-mute md:col-span-1">03</p>
+            <div class="md:col-span-10">
+              <h3 class="text-xl font-medium tracking-tight" data-i18n="work.3.title">Archives and process</h3>
+              <p class="mt-3 max-w-2xl text-sm leading-6 text-mute" data-i18n="work.3.body">Platforms for process and archival management, used by public and private organizations. Angular and TypeScript on the front. Java, Spring Boot, and PostgreSQL on the back. A Spring service listens for events from an Alfresco repository. Docker and GitLab CI took the manual steps out of the release.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="border-t border-line">
+    <div class="mx-auto max-w-page px-6 py-24 md:py-32">
+      <p class="text-xs font-medium uppercase tracking-[0.18em] text-mute" data-i18n="contact.index">04 — Contact</p>
+      <h2 class="mt-3 max-w-xl text-3xl font-medium tracking-tight md:text-4xl" data-i18n="contact.title">Tell me what you are building.</h2>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="mailto:idomelo123@gmail.com" class="text-base text-paper underline decoration-line underline-offset-4 hover:decoration-accent">idomelo123@gmail.com</a>
+        <button id="copy-email" class="h-8 rounded-full border border-line px-3 text-xs text-mute transition-colors hover:border-mute hover:text-paper" type="button" data-email="idomelo123@gmail.com" data-i18n="copy">Copy</button>
+        <span id="copy-status" class="text-xs text-accent" role="status" aria-live="polite"></span>
+      </div>
+      <ul class="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-mute">
+        <li><a class="transition-colors hover:text-paper" href="https://github.com/idomelo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a class="transition-colors hover:text-paper" href="https://www.linkedin.com/in/idomelo/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a class="transition-colors hover:text-paper" href="https://gitlab.com/idomelo" target="_blank" rel="noopener noreferrer">GitLab</a></li>
+      </ul>
+      <p class="mt-16 text-xs text-mute">© <span id="year">2026</span> Ido Ferreira Melo</p>
+    </div>
+  </footer>
+
+  <script>
+    const messages = {
+      en: {
+        skip: "Skip to content",
+        "nav.primary": "Primary",
+        "nav.mobile": "Mobile",
+        "nav.about": "About",
+        "nav.stack": "Stack",
+        "nav.work": "Work",
+        "nav.contact": "Contact",
+        "lang.label": "Language",
+        "menu.open": "Menu",
+        "menu.close": "Close",
+        "theme.toLight": "Switch to light mode",
+        "theme.toDark": "Switch to dark mode",
+        "hero.kicker": "Full-Stack Engineer · Java & Angular",
+        "hero.title": "I keep complex systems easy to change.",
+        "hero.lead": "{years}+ years shipping Angular and Spring Boot software — from the data model to the screen.",
+        "hero.view": "View work",
+        "hero.contact": "Get in touch",
+        "stat.experience": "Experience",
+        "stat.years": "{years}+ years",
+        "stat.focus": "Focus",
+        "stat.based": "Based in",
+        "stat.place": "Ceará, Brazil",
+        "about.index": "01 — About",
+        "about.title": "How I work",
+        "about.p1": "Most of my work lives where a product meets an organization: records, permissions, queues, and the screens people use every day. Those constraints are the job. A vague design shows up later, usually in production.",
+        "about.p2": "I work across the stack. Angular, TypeScript, and RxJS on the front. Java, Spring Boot, and PostgreSQL on the back, with JUnit and Mockito where behavior has to stay fixed. Delivery includes GitLab CI, Docker, and SonarQube. I have also built content-management flows on Alfresco.",
+        "about.p3": "I like shipping clean, scalable code. Small changes, explicit contracts, and writing for the next person who opens the file.",
+        "stack.index": "02 — Stack",
+        "stack.title": "What I use",
+        "stack.lead": "Tools I rely on in day-to-day delivery, grouped by where they sit.",
+        "stack.frontend": "Frontend",
+        "stack.backend": "Backend",
+        "stack.data": "Data",
+        "stack.delivery": "Delivery",
+        "work.index": "03 — Work",
+        "work.title": "What I have shipped",
+        "work.lead": "Logistics, transportation, and archival software. Java and Angular, still in production.",
+        "work.1.title": "Driver and routing software",
+        "work.1.body": "I maintain and evolve logistics applications for drivers and route planning, in Java and Angular. Map interaction had to stay fluid at real volume: more than 4.5 million deliveries in 2025.",
+        "work.2.title": "Access on a transportation system",
+        "work.2.body": "On a TMS, I implemented access control so only authorized people reach specific parts of the product.",
+        "work.3.title": "Archives and process",
+        "work.3.body": "Platforms for process and archival management, used by public and private organizations. Angular and TypeScript on the front. Java, Spring Boot, and PostgreSQL on the back. A Spring service listens for events from an Alfresco repository. Docker and GitLab CI took the manual steps out of the release.",
+        "contact.index": "04 — Contact",
+        "contact.title": "Tell me what you are building.",
+        copy: "Copy",
+        copied: "Copied",
+        "meta.title": "Ido Melo — Full-Stack Engineer, Java & Angular",
+        "meta.description": "Ido Melo is a full-stack engineer building Angular and Spring Boot systems for logistics, transportation, and archival platforms. Based in Ceará, Brazil."
+      },
+      pt: {
+        skip: "Ir para o conteúdo",
+        "nav.primary": "Principal",
+        "nav.mobile": "Móvel",
+        "nav.about": "Sobre",
+        "nav.stack": "Stack",
+        "nav.work": "Trabalho",
+        "nav.contact": "Contato",
+        "lang.label": "Idioma",
+        "menu.open": "Menu",
+        "menu.close": "Fechar",
+        "theme.toLight": "Ativar modo claro",
+        "theme.toDark": "Ativar modo escuro",
+        "hero.kicker": "Engenheiro Full-Stack · Java e Angular",
+        "hero.title": "Mantenho sistemas complexos fáceis de mudar.",
+        "hero.lead": "{years}+ anos entregando software com Angular e Spring Boot — do modelo de dados à tela.",
+        "hero.view": "Ver trabalho",
+        "hero.contact": "Entrar em contato",
+        "stat.experience": "Experiência",
+        "stat.years": "{years}+ anos",
+        "stat.focus": "Foco",
+        "stat.based": "Base",
+        "stat.place": "Ceará, Brasil",
+        "about.index": "01 — Sobre",
+        "about.title": "Como eu trabalho",
+        "about.p1": "A maior parte do meu trabalho está onde o produto encontra a organização: registros, permissões, filas e as telas que as pessoas usam todo dia. Essas restrições são o trabalho. Um desenho vago aparece depois, em geral em produção.",
+        "about.p2": "Eu atravesso a stack. Angular, TypeScript e RxJS na frente. Java, Spring Boot e PostgreSQL atrás, com JUnit e Mockito onde o comportamento precisa permanecer fixo. A entrega inclui GitLab CI, Docker e SonarQube. Também construí fluxos de gestão de conteúdo no Alfresco.",
+        "about.p3": "Gosto de entregar código limpo e escalável. Mudanças pequenas, contratos explícitos, e escrever para a próxima pessoa que abrir o arquivo.",
+        "stack.index": "02 — Stack",
+        "stack.title": "O que eu uso",
+        "stack.lead": "Ferramentas do dia a dia, agrupadas por onde entram.",
+        "stack.frontend": "Frontend",
+        "stack.backend": "Backend",
+        "stack.data": "Dados",
+        "stack.delivery": "Entrega",
+        "work.index": "03 — Trabalho",
+        "work.title": "O que eu entreguei",
+        "work.lead": "Software de logística, transporte e arquivo. Java e Angular, ainda em produção.",
+        "work.1.title": "Software de motorista e roteirização",
+        "work.1.body": "Mantenho e evoluo aplicações de logística para motoristas e planejamento de rotas, em Java e Angular. A interação com mapas precisou continuar fluida no volume real: mais de 4,5 milhões de entregas em 2025.",
+        "work.2.title": "Acesso em um sistema de transporte",
+        "work.2.body": "Em um TMS, implementei o controle de acesso para que só pessoas autorizadas cheguem a partes específicas do produto.",
+        "work.3.title": "Arquivos e processos",
+        "work.3.body": "Plataformas de gestão de processos e arquivo, usadas por organizações públicas e privadas. Angular e TypeScript na frente. Java, Spring Boot e PostgreSQL atrás. Um serviço Spring escuta eventos de um repositório Alfresco. Docker e GitLab CI tiraram os passos manuais da publicação.",
+        "contact.index": "04 — Contato",
+        "contact.title": "Me conta o que você está construindo.",
+        copy: "Copiar",
+        copied: "Copiado",
+        "meta.title": "Ido Melo — Engenheiro Full-Stack, Java e Angular",
+        "meta.description": "Ido Melo é engenheiro full-stack e constrói sistemas em Angular e Spring Boot para logística, transporte e plataformas de arquivo. Ceará, Brasil."
+      },
+      es: {
+        skip: "Ir al contenido",
+        "nav.primary": "Principal",
+        "nav.mobile": "Móvil",
+        "nav.about": "Sobre mí",
+        "nav.stack": "Stack",
+        "nav.work": "Trabajo",
+        "nav.contact": "Contacto",
+        "lang.label": "Idioma",
+        "menu.open": "Menú",
+        "menu.close": "Cerrar",
+        "theme.toLight": "Activar modo claro",
+        "theme.toDark": "Activar modo oscuro",
+        "hero.kicker": "Ingeniero Full-Stack · Java y Angular",
+        "hero.title": "Mantengo los sistemas complejos fáciles de cambiar.",
+        "hero.lead": "{years}+ años entregando software con Angular y Spring Boot — del modelo de datos a la pantalla.",
+        "hero.view": "Ver trabajo",
+        "hero.contact": "Contactar",
+        "stat.experience": "Experiencia",
+        "stat.years": "{years}+ años",
+        "stat.focus": "Foco",
+        "stat.based": "Base",
+        "stat.place": "Ceará, Brasil",
+        "about.index": "01 — Sobre mí",
+        "about.title": "Cómo trabajo",
+        "about.p1": "La mayor parte de mi trabajo está donde el producto se encuentra con la organización: registros, permisos, colas y las pantallas que la gente usa cada día. Esas restricciones son el trabajo. Un diseño vago aparece después, casi siempre en producción.",
+        "about.p2": "Trabajo en toda la stack. Angular, TypeScript y RxJS al frente. Java, Spring Boot y PostgreSQL detrás, con JUnit y Mockito donde el comportamiento tiene que quedar fijo. La entrega incluye GitLab CI, Docker y SonarQube. También construí flujos de gestión de contenido en Alfresco.",
+        "about.p3": "Me gusta entregar código limpio y escalable. Cambios pequeños, contratos explícitos, y escribir para la siguiente persona que abra el archivo.",
+        "stack.index": "02 — Stack",
+        "stack.title": "Lo que uso",
+        "stack.lead": "Herramientas del día a día, agrupadas por dónde entran.",
+        "stack.frontend": "Frontend",
+        "stack.backend": "Backend",
+        "stack.data": "Datos",
+        "stack.delivery": "Entrega",
+        "work.index": "03 — Trabajo",
+        "work.title": "Lo que he entregado",
+        "work.lead": "Software de logística, transporte y archivo. Java y Angular, todavía en producción.",
+        "work.1.title": "Software de conductores y ruteo",
+        "work.1.body": "Mantengo y hago evolucionar aplicaciones de logística para conductores y planificación de rutas, en Java y Angular. La interacción con mapas tenía que seguir siendo fluida en el volumen real: más de 4,5 millones de entregas en 2025.",
+        "work.2.title": "Acceso en un sistema de transporte",
+        "work.2.body": "En un TMS, implementé el control de acceso para que solo las personas autorizadas lleguen a partes específicas del producto.",
+        "work.3.title": "Archivos y procesos",
+        "work.3.body": "Plataformas de gestión de procesos y archivo, usadas por organizaciones públicas y privadas. Angular y TypeScript al frente. Java, Spring Boot y PostgreSQL detrás. Un servicio Spring escucha eventos de un repositorio Alfresco. Docker y GitLab CI sacaron los pasos manuales de la publicación.",
+        "contact.index": "04 — Contacto",
+        "contact.title": "Cuéntame qué estás construyendo.",
+        copy: "Copiar",
+        copied: "Copiado",
+        "meta.title": "Ido Melo — Ingeniero Full-Stack, Java y Angular",
+        "meta.description": "Ido Melo es ingeniero full-stack y construye sistemas en Angular y Spring Boot para logística, transporte y plataformas de archivo. Ceará, Brasil."
+      }
+    };
+
+    const locales = { en: "en_US", pt: "pt_BR", es: "es_ES" };
+    const sun = '<circle cx="12" cy="12" r="3.25"></circle><path d="M12 3.5v1.75M12 18.75V20.5M3.5 12h1.75M18.75 12H20.5M5.8 5.8l1.25 1.25M16.95 16.95l1.25 1.25M18.2 5.8l-1.25 1.25M7.05 16.95 5.8 18.2"></path>';
+    const moon = '<path d="M20 14.6A7.8 7.8 0 0 1 9.4 4 6.6 6.6 0 1 0 20 14.6z"></path>';
+
+    function readStore(key) {
+      try {
+        return localStorage.getItem(key);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function writeStore(key, value) {
+      try {
+        if (value == null) localStorage.removeItem(key);
+        else localStorage.setItem(key, value);
+      } catch (error) {
+        return;
+      }
+    }
+
+    function systemLang() {
+      const list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
+      const code = String(list[0]).slice(0, 2).toLowerCase();
+      return code === "pt" || code === "es" ? code : "en";
+    }
+
+    function systemTheme() {
+      return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+
+    const now = new Date();
+    const year = now.getFullYear();
+    let experience = year - 2022;
+    if (now.getMonth() < 4) experience -= 1;
+    const storedLang = readStore("lang");
+    let lang = storedLang === "pt" || storedLang === "en" || storedLang === "es" ? storedLang : systemLang();
+
+    function t(key) {
+      const value = (messages[lang] && messages[lang][key]) || messages.en[key] || "";
+      return value.replaceAll("{years}", String(experience));
+    }
+
+    const menuButton = document.getElementById("menu-button");
+    const mobileNav = document.getElementById("mobile-nav");
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
+    const copyStatus = document.getElementById("copy-status");
+
+    function syncMenuLabel() {
+      const open = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.textContent = t(open ? "menu.close" : "menu.open");
+    }
+
+    function applyLang() {
+      document.documentElement.lang = lang;
+      document.title = t("meta.title");
+      document.querySelector('meta[name="description"]').setAttribute("content", t("meta.description"));
+      document.querySelector('meta[property="og:title"]').setAttribute("content", t("meta.title"));
+      document.querySelector('meta[property="og:description"]').setAttribute("content", t("meta.description"));
+      document.querySelector('meta[property="og:locale"]').setAttribute("content", locales[lang]);
+      document.querySelector('meta[name="twitter:title"]').setAttribute("content", t("meta.title"));
+      document.querySelector('meta[name="twitter:description"]').setAttribute("content", t("meta.description"));
+      document.querySelectorAll("[data-i18n]").forEach((node) => {
+        if (node === menuButton) return;
+        node.textContent = t(node.dataset.i18n);
+      });
+      document.querySelectorAll("[data-i18n-aria]").forEach((node) => {
+        node.setAttribute("aria-label", t(node.dataset.i18nAria));
+      });
+      document.querySelectorAll("[data-set-lang]").forEach((button) => {
+        const active = button.dataset.setLang === lang;
+        button.setAttribute("aria-pressed", String(active));
+        button.classList.toggle("text-paper", active);
+        button.classList.toggle("font-medium", active);
+        button.classList.toggle("underline", active);
+        button.classList.toggle("underline-offset-4", active);
+        button.classList.toggle("text-mute", !active);
+      });
+      syncMenuLabel();
+      applyTheme(document.documentElement.getAttribute("data-theme") || systemTheme());
+    }
+
+    function setLang(next, persist) {
+      lang = next;
+      if (persist) writeStore("lang", next === systemLang() ? null : next);
+      applyLang();
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", theme === "light" ? "#F6F6F4" : "#0A0A0A");
+      const light = theme === "light";
+      themeToggle.setAttribute("aria-pressed", String(light));
+      themeToggle.setAttribute("aria-label", t(light ? "theme.toDark" : "theme.toLight"));
+      themeIcon.innerHTML = light ? moon : sun;
+    }
+
+    function setTheme(theme) {
+      writeStore("theme", theme === systemTheme() ? null : theme);
+      applyTheme(theme);
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setLang(button.dataset.setLang, true));
+    });
+    themeToggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+    window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", () => {
+      if (!readStore("theme")) applyTheme(systemTheme());
+    });
+    window.addEventListener("languagechange", () => {
+      if (!readStore("lang")) setLang(systemLang(), false);
+    });
+
+    const header = document.getElementById("header");
+    const onScroll = () => header.classList.toggle("nav-scrolled", window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    menuButton.addEventListener("click", () => {
+      const open = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!open));
+      mobileNav.classList.toggle("hidden", open);
+      syncMenuLabel();
+    });
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menuButton.setAttribute("aria-expanded", "false");
+        mobileNav.classList.add("hidden");
+        syncMenuLabel();
+      });
+    });
+
+    const copyButton = document.getElementById("copy-email");
+    copyButton.addEventListener("click", async () => {
+      const email = copyButton.dataset.email;
+      try {
+        await navigator.clipboard.writeText(email);
+        copyStatus.textContent = t("copied");
+      } catch (error) {
+        copyStatus.textContent = email;
+      }
+      window.setTimeout(() => {
+        copyStatus.textContent = "";
+      }, 1800);
+    });
+
+    document.getElementById("year").textContent = String(year);
+    const structuredData = document.getElementById("structured-data");
+    structuredData.textContent = structuredData.textContent.replaceAll("2026", String(year));
+
+    try {
+      applyLang();
+    } finally {
+      document.documentElement.classList.add("ready");
+    }
+
+    const reveals = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach((node) => observer.observe(node));
+    } else {
+      reveals.forEach((node) => node.classList.add("in"));
+    }
+  </script>
+</body>
 </html>
